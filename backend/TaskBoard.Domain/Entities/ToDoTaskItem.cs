@@ -1,4 +1,4 @@
-﻿
+
 using System.ComponentModel.DataAnnotations;
 using TaskBoard.Domain.Enum;
 
@@ -39,11 +39,6 @@ namespace TaskBoard.Domain.Entities
 
         public void MarkInProgress()
         {
-
-            if (this.IsCompleted)
-            {
-                throw new InvalidOperationException("Completed tasks cannot be moved back to In Progress without being reset.");
-            }
 
             Status = TaskToDoStatus.InProgress;
             UpdatedAt = DateTime.UtcNow;

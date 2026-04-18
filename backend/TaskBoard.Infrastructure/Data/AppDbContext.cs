@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,5 +30,13 @@ namespace TaskBoard.Infrastructure.Data
             return await base.SaveChangesAsync(cancellationToken);
         }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+      modelBuilder.Entity<ToDoTaskItem>()
+          .Ignore(t => t.IsCompleted); 
+
+      base.OnModelCreating(modelBuilder);
     }
+
+  }
 }

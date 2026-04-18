@@ -12,7 +12,7 @@ using TaskBoard.Infrastructure.Data;
 namespace TaskBoard.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260417212420_InitialCreate")]
+    [Migration("20260418111849_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -38,9 +38,6 @@ namespace TaskBoard.Infrastructure.Persistence.Migrations
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
-
-                    b.Property<bool>("IsCompleted")
-                        .HasColumnType("bit");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");

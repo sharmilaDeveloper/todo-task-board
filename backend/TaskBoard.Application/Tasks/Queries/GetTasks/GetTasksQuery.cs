@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,7 +30,7 @@ namespace TaskBoard.Application.Tasks.Queries.GetTasks
                     Title = t.Title,
                     Description = t.Description,
                     Status = t.Status,
-                    IsCompleted = t.Status == TaskToDoStatus.Completed
+                    IsCompleted = t.IsCompleted
 
                 })
                 .ToListAsync(cancellationToken);
