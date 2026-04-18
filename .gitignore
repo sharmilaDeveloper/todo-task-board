@@ -5,6 +5,11 @@
 /out-tsc
 /bazel-out
 
+# Visual Studio
+.vs/
+bin/
+obj/
+
 # Node
 /node_modules
 npm-debug.log
